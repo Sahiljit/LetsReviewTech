@@ -1,0 +1,144 @@
+.form{
+
+    max-width: 75rem;
+    padding:4.8rem;
+    box-shadow: 0 0 0.8rem rgba(108, 145, 245, 0.5);
+    margin: 0 auto;
+    margin-top:5rem;
+
+    .heading{
+        color: var(--primary-color);
+        font-size:3.2rem;
+        margin-bottom:5rem;
+    }
+
+
+    .row{
+        max-width:65rem;
+        display:flex;
+        flex-direction: column;
+        margin-bottom:4rem;
+
+        label{
+            font-size: 1.9rem;
+            font-weight: 500;
+            // color: rgb(102, 101, 109);
+            color: var(--primary-light-color);
+            margin-bottom: 0.8rem;
+        }
+
+        input, textarea{
+            background-color: var(--background-light-color);
+            border:none;
+            height:5.2rem;
+            border-radius:0.5rem;
+            padding-left: 1.2rem;
+            font-size: 2rem;
+           
+        }
+        input::placeholder, textarea::placeholder{
+            margin-left: 1rem;
+            // padding-left: 1rem;
+        }
+
+        input:focus, textarea:focus{
+            outline:none;
+        }
+        
+    }
+
+    .review-container{
+
+        margin-bottom: 4.5rem;
+        // font-size:5rem;
+
+
+        .label{
+            font-size: 1.9rem;
+            font-weight: 500;
+            // color: rgb(102, 101, 109);
+            color: var(--primary-light-color);
+            margin-bottom: 0.8rem;
+
+        }
+
+        .review-editor{
+            font-size:2rem;
+            background-color: var(--background-light-color);
+
+        }
+    }
+
+
+    .tags-container{
+        margin-bottom:4rem;
+
+        .label{
+            font-size: 1.9rem;
+            font-weight: 500;
+            // color: rgb(102, 101, 109);
+            color: var(--primary-light-color);
+            margin-bottom: 0.8rem;
+
+        }
+
+
+        .tags{
+            font-size:2.2rem;
+        }
+    }
+
+
+    .rating{
+
+        .label{
+            font-size: 1.9rem;
+            font-weight: 500;
+            // color: rgb(102, 101, 109);
+            color: var(--primary-light-color);
+            margin-bottom: 0.8rem;
+
+        }
+
+        .rating-container{
+            display:flex;
+            align-items:center;
+            gap:2rem;
+            margin-bottom:6rem;         
+            
+    
+            .rating-star{
+                font-size:3.5rem;
+            }
+    
+            .rating-name{
+                font-size:2.4rem;
+                font-weight: 500;
+                color: rgb(101, 101, 110);
+    
+            }
+        }
+    
+
+
+    }
+
+ 
+  
+
+    .btn{
+
+        font-size:1.8rem;
+        background-color: var(--primary-light-color);    
+        
+        &:hover{
+            background-color: var(--primary-color);    
+
+        }
+    }
+
+ 
+
+   
+
+}

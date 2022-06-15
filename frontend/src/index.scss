@@ -1,0 +1,63 @@
+:root {
+  
+  --background-color: #d6f9f7;
+  --background-light-color: #f1f1f1;
+  --primary-color: #3b2494;
+  --primary-light-color: #527ef9;
+  --secondary-color: #A3D8F4;
+  --secondary-light-color: #cce3f0;
+  --black:#080818;
+  --grey:#363649;
+  
+
+  // //dark theme
+  // --background-color: #1C0C5B;
+  // --primary-color: #e2d0f9;
+  // --primary-light-color: #f2b0f6;
+  // --background-light-color: #3D2C8D;
+
+}
+
+html{
+  font-size:62.5%;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.ql-editor {
+  font-size: 2rem;
+  background-color: #f1f1f1;
+  // padding:0px;
+  // margin-bottom:0rem !important;
+}
+
+.ql-container, .ql-bubble,  .ql-disabled{
+  min-height:2rem !important;
+}
+
+.loading-container{
+
+  max-width: 5rem;
+  margin: 0 auto;
+  margin-top:10rem;
+
+  .loading{
+    .loading-icon{
+        font-size:1rem;
+        color:var(--primary-color);
+    }
+  }
+
+}
+
+
+
+
+
