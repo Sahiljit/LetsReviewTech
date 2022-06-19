@@ -7,6 +7,8 @@ import { getReviews,
         getReviewById, 
         deleteReview,
         getMyReviews,
+        getReviewsByTags,
+        
  } from '../controllers/reviewController.js'
 
 import { protect } from '../middleware/authHandler.js'
@@ -23,6 +25,12 @@ router
 router
     .route('/my-reviews')
     .get(protect,getMyReviews)
+
+
+router
+    .route('/search')
+    .post(protect,getReviewsByTags)
+
 
 
 router

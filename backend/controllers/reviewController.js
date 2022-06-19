@@ -155,4 +155,26 @@ export const getMyReviews = asyncHandler(async(req, res) => {
 
 
 
+export const getReviewsByTags = asyncHandler(async(req, res) => {
+
+    console.log("inside getReviews by tags backend")
+
+    
+ 
+    const tags = req.body
+
+
+    const reviews = await Review.find({tags : {$all: tags}})
+
+    // console.log(reviews)
+
+    res.status(200).json(reviews)
+
+
+
+})
+
+
+
+
 
