@@ -2,6 +2,9 @@ import React , {useState} from 'react'
 import './Filter.scss'
 import Select from 'react-select'
 import {Button} from '@mui/material';
+import {useDispatch, useSelector} from 'react-redux'
+import {getReviewsByTags} from '../../redux/actions/reviewActions'
+
 
 
 
@@ -27,8 +30,6 @@ const options = [
   { value: 'Mobile', label: 'Mobile' },
   { value: 'Apple', label: 'Apple' },
   { value: 'Xiomi', label: 'Xiomi' },
-
-
   
 ]
 
@@ -37,9 +38,21 @@ const Filter = () => {
 
   const [tags, setTags] = useState([])
 
+  const dispatch = useDispatch()
+
 
   function handleTags(data) {
     setTags(data);
+  }
+
+
+
+  const searchHandler = () => {
+
+    const newTags = tags.map(tag => tag.value)
+
+    dispatch(getReviewsByTags(newTags))    
+
   }
 
 
@@ -63,7 +76,7 @@ const Filter = () => {
         <Button
           className='search-btn'
           variant="contained"
-          // onClick = {searchHandler}
+          onClick = {searchHandler}
           >
             Search
         </Button>

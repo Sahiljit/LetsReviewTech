@@ -294,6 +294,45 @@ export const getMyReviews = () => async(dispatch, getState) => {
 }
 
 
+export const getReviewsByTags = (tags) => async(dispatch, getState) => {
+
+  try{
+      dispatch({ 
+        type: GET_REVIEWS_REQUEST
+      })
+
+      const {userLogin: {userInfo}} = getState()
+  
+      const config = {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${userInfo.token}`
+        }
+      }
+
+      console.log("inside getReviewsByTags redux" ,tags)
+         
+      const {data} = await axios.post(`/api/reviews/search`, tags, config )
+  
+      
+      dispatch({
+        type: GET_REVIEWS_SUCCESS,
+        payload: data
+      })      
+  
+    }
+    catch (error) {
+      dispatch({
+        type: GET_REVIEWS_FAIL,
+        payload:
+          error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
+      })
+    }
+  
+}
+
 
 
 

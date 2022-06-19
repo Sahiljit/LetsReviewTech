@@ -41,7 +41,7 @@ const HomeScreen = () => {
     dispatch(getReviews(keyword))
 
 
-  }, [dispatch, successUpVote, keyword,successDelete])
+  }, [dispatch, successUpVote,  keyword,successDelete])
 
 
   useEffect(() => {
