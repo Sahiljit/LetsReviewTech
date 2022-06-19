@@ -60,9 +60,9 @@ const HomeScreen = () => {
   return (
     <div className ="home-screen">
               
-      {/* <div className="filters">
+      <div >
               <Filter/>
-      </div> */}
+      </div>
 
       <div className="home-screen-container">
           {loading?

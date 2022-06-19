@@ -57,6 +57,7 @@ const ReviewForm = () => {
 
 
 
+
     const  modules = {
     toolbar: [
       [{ 'header': [1, 2, 3, false] }],
@@ -112,23 +113,33 @@ const ReviewForm = () => {
         setName(review.name)
         setRating(review.rating)
         setReviewValue(review.review)
-        setTags(review.tags)
+        setTags(review.tags.map(tag => ({
+          value : tag,
+          label : tag
+        })))
+        // console.log("this is tags coming", tags)
       }
     }, [dispatch, reviewId, review, successUpdate])
 
     useEffect(() => 
     dispatch(getReviewDetails(reviewId))
 
+
     , [])
 
 
     const updateReviewHandler = ()=> {
+
+      const newTags = tags.map(tag => tag.value)
+
+      console.log(newTags)
+
       dispatch(updateReview({
           _id: reviewId,
           name,
           rating,
           reviewValue,
-          tags,
+          newTags,
       }))
     }
 
@@ -185,6 +196,7 @@ const ReviewForm = () => {
     <div className="label">Tags</div>
     <Select
         // defaultValue={[options[1], options[2]]}
+        // placeholder = "Search by Tags"
         isMulti
         name="colors"
         options={options}

@@ -22,7 +22,7 @@ const reviewSchema = mongoose.Schema({
     
     review: {type: String, required: true},
     
-    tags: [Object],
+    tags: [String],
    
     upVotes: [upVoteSchema],
 

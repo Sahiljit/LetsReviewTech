@@ -107,7 +107,7 @@ export const upVote  = asyncHandler(async(req, res) => {
 
 export const updateReview = asyncHandler(async(req, res)=> {
 
-    const {name, rating, reviewValue, tags} = req.body
+    const {name, rating, reviewValue, newTags} = req.body
 
     const review = await Review.findById(req.params.id)
 
@@ -116,7 +116,7 @@ export const updateReview = asyncHandler(async(req, res)=> {
         review.name = name
         review.rating = rating
         review.review = reviewValue
-        review.tags = tags
+        review.tags = newTags
 
 
         const updatedReview = await review.save()
