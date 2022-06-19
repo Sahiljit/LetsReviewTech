@@ -294,25 +294,25 @@ export const getMyReviews = () => async(dispatch, getState) => {
 }
 
 
-export const getReviewsByTags = (tags) => async(dispatch, getState) => {
+export const getReviewsByTags = (tags) => async(dispatch) => {
 
   try{
       dispatch({ 
         type: GET_REVIEWS_REQUEST
       })
 
-      const {userLogin: {userInfo}} = getState()
+      // const {userLogin: {userInfo}} = getState()
   
-      const config = {
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${userInfo.token}`
-        }
-      }
+      // const config = {
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //     Authorization: `Bearer ${userInfo.token}`
+      //   }
+      // }
 
       console.log("inside getReviewsByTags redux" ,tags)
          
-      const {data} = await axios.post(`/api/reviews/search`, tags, config )
+      const {data} = await axios.post(`/api/reviews/search`, tags )
   
       
       dispatch({

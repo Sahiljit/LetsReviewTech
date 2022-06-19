@@ -29,7 +29,7 @@ router
 
 router
     .route('/search')
-    .post(protect,getReviewsByTags)
+    .post(getReviewsByTags)
 
 
 

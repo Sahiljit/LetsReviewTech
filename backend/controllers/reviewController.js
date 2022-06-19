@@ -163,10 +163,23 @@ export const getReviewsByTags = asyncHandler(async(req, res) => {
  
     const tags = req.body
 
+    let reviews
 
-    const reviews = await Review.find({tags : {$all: tags}})
+    if(tags.length == 0){
+        
+        reviews = await Review.find({})        
+    }
+    else{
+        reviews = await Review.find({tags : {$all: tags}})        
+
+    }
 
     // console.log(reviews)
+
+    // if(reviews.length == 0){
+    //     reviews = await Review.find({})        
+
+    // }
 
     res.status(200).json(reviews)
 

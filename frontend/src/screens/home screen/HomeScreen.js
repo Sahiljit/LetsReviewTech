@@ -61,7 +61,7 @@ const HomeScreen = () => {
     <div className ="home-screen">
               
       <div >
-              <Filter/>
+          <Filter/>
       </div>
 
       <div className="home-screen-container">
@@ -73,9 +73,20 @@ const HomeScreen = () => {
                  </div>
               :
               <div className="reviews-container">
-              {reviews.map((review)=> (
+              {!reviews || reviews.length == 0 ?
+
+              <div className="no-reivews-message">
+                No Reviews Found
+              </div>
+
+              :
+              <> 
+              {reviews && reviews.map((review)=> (
                 <ReviewCard review={review} />
               ))}
+              </>
+              }
+             
               </div>
           }
       </div>
