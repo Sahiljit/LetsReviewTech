@@ -3,6 +3,8 @@
 
 This is Full Stack  application made using **MERN Stack**. The **Idea** was to build a platform where users can review a Tech Product. Do watch [the Demo](https://www.youtube.com/watch?v=dNBVHuGEX3g).
 
+NOTE:- Filter by Tags functionality was added afterwards (as shown in 1st Screenshot)
+
 <br/>
 
 
@@ -30,13 +32,14 @@ This is Full Stack  application made using **MERN Stack**. The **Idea** was to b
 3. UpVote 
 4. Search
 5. Rich Text Editor, Tags and Rating for Review 
+6. Filter by Tags
 
 <br/>
 
 
 ## Screenshots
 
-![App Screenshot](/screenshots/ss-1.png)
+![App Screenshot](/screenshots/ss-4.png)
 <br/>
 
 ![App Screenshot](/screenshots/ss-2.png)
@@ -69,8 +72,7 @@ Follow the following steps to run the project locally -
 
 <br/>
 
-## Future
-Filtering reviews according to tags, rating and createdAt functionality can be added.
+
 
 
 ## Feedback

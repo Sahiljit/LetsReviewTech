@@ -78,7 +78,7 @@ const Filter = () => {
           variant="contained"
           onClick = {searchHandler}
           >
-            Search
+            Filter
         </Button>
 
 
